@@ -1,0 +1,11 @@
+.NavigationItems.Requister {
+  flex-direction: row;
+}
+.NavigationItems.Requister li + li {
+  display: none;
+}
+@media (min-width: 500px) {
+  .NavigationItems.Requister li + li {
+    display: inherit;
+  }
+}

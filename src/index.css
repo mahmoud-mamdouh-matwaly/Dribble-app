@@ -1,3 +1,10 @@
+/* FontAwesome Icons */
+@import url("https://use.fontawesome.com/releases/v5.3.1/css/solid.css");
+@import url("https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css");
+* {
+  outline: 1px solid red;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -7,8 +14,235 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+.btn {
+  background-color: transparent;
+  padding: 5px 20px;
+  border: 1px solid #c5bebe;
+  text-transform: capitalize;
+  cursor: pointer;
+  outline: none;
+}
+.btn + .btn {
+  margin-left: 5px;
+}
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  display: block;
+}
+.card__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.card__modal__content {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.card__modal__content > button {
+  position: absolute;
+  top: -14px;
+  right: -15px;
+  border-radius: 99px;
+}
+
+.card__modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+}
+.modal__box {
+  max-width: 672px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding-bottom: 44px;
+}
+.modal__header {
+  padding: 24px;
+}
+.modal__header-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.modal__header-info {
+  display: flex;
+  align-items: center;
+}
+.modal__header__avater {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.modal__header--infoOwner a {
+  color: #155479;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.modal__header--infoOwner time {
+  color: #b5b0b0;
+  margin: 0 10px;
+}
+.modal__header__action button i,
+.modal__content__action button i {
+  margin-right: 5px;
+}
+.modal__header__action button,
+.modal__content__action button {
+  color: #777;
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 1px #bbb inset;
+  border: 0;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.modal__banner {
+  background-color: #ffffff;
+  padding: 10px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.modal__banner__image {
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 45%;
+  overflow: hidden;
+  position: relative;
+}
+.modal__banner__image img {
+  max-width: 100%;
+  object-fit: contain;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.modal__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  flex-direction: column;
+}
+.modal__content__comment {
+  flex-basis: 65%;
+}
+.modal__content__comment p {
+  font-size: 13px;
+  color: #333333;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d4cfcf;
+}
+.modal__content__action {
+  flex-basis: 35%;
+  text-align: center;
+}
+.modal__content__action .card__action .card__action-list {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modal__content__action .card__action .card__action-list button {
+  box-shadow: none;
+  border: 0;
+  background-color: transparent;
+  justify-content: space-between;
+  width: 45px;
+  margin-bottom: 5px;
+}
+.modal__content__action
+  .card__action
+  .card__action-list
+  button
+  .visually-hidden {
+  height: inherit;
+  position: static;
+  margin: 0;
+  overflow: inherit;
+  text-transform: capitalize;
+}
+
+.modal__content__response {
+  padding-top: 7px;
+}
+.modal__content__response h3 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.6;
+  text-transform: capitalize;
+}
+.modal--response__comment {
+  display: flex;
+}
+.modal--response__comment__type {
+  font-size: 13px;
+  color: #333333;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d4cfcf;
+}
+.modal--response__comment__type p {
+  border-bottom: 0;
+}
+.modal--response__comment img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.modal--response__comment__action {
+  display: flex;
+  justify-content: space-between;
+}
+.modal--response__comment__action time {
+  color: #333333;
+  font-size: 11px;
+}
+.modal--response__comment__action a {
+  color: #d4cfcf;
+  font-size: 11px;
+}
+.modal--response__comment__action a img {
+  width: 14px;
+  height: 12px;
+  margin-right: 4px;
+  margin-bottom: -1px;
+}
+@media (min-width: 768px) {
+  .modal__header-head,
+  .modal__content {
+    flex-direction: row;
+  }
+  .modal__content__action {
+    text-align: right;
+  }
 }

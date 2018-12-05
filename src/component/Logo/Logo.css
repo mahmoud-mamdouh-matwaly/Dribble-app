@@ -1,0 +1,12 @@
+.Logo {
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 70px;
+}
+
+.Logo img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}

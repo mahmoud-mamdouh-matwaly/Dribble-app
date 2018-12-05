@@ -1,0 +1,84 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+.list__card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+.card {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 15px 0;
+}
+
+.card__item {
+  padding: 8px;
+  border-radius: 2px;
+  box-shadow: 0px 5px 12px -6px #d4cfcf;
+  background-color: #ffffff;
+}
+.card__image {
+  width: 100%;
+  padding-bottom: 75%;
+  height: 0;
+  display: block;
+  overflow: hidden;
+}
+.card__image img {
+  max-width: 100%;
+  object-fit: contain;
+  height: auto;
+}
+.card__action {
+  margin-top: 6px;
+}
+.card__action-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #585454;
+  font-size: 12px;
+}
+
+.card__action-item button {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+.card__action-item button img {
+  margin-right: 2px;
+}
+
+.card__owner {
+  margin-top: 16px;
+}
+.card__owner a {
+  color: #155479;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  text-transform: capitalize;
+}
+
+.card__owner img {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+@media (min-width: 500px) {
+  .card {
+    flex-basis: 23%;
+  }
+}

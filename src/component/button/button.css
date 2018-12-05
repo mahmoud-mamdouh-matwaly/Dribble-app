@@ -1,0 +1,31 @@
+.button {
+  background-color: transparent;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 13px;
+  display: block;
+  line-height: 40px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid transparent;
+  transition: 500ms all ease-in-out;
+}
+
+.button + .button {
+  margin-top: 8px;
+  color: #155479;
+}
+.button--backgroundcolor {
+  background-color: #ce004e;
+  color: #ffffff;
+}
+.button:hover {
+  color: #ce004e;
+  border-color: #ce004e;
+  background-color: transparent;
+}

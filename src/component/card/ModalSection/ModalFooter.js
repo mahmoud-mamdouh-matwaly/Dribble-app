@@ -5,7 +5,6 @@ import CardAction from "../CardAction";
 
 class ModalFooter extends Component {
   render() {
-    const { val } = this.props;
     return (
       <>
         <div className="modal__content__comment">
@@ -42,7 +41,7 @@ class ModalFooter extends Component {
             <i className="fas fa-paperclip" />
             Copy Link
           </Button>
-          <CardAction valueLike={val} />
+          <CardAction />
         </div>
       </>
     );

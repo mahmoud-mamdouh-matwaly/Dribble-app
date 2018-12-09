@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import Button from "../../button";
 import { connect } from "react-redux";
 // import * as actionType from "../../../store/actions";
+import { updateComment } from "../../../store/actions";
 class ModalHeader extends Component {
   render() {
-    const { name } = this.props;
+    const { name, id, value } = this.props;
     return (
       <div className="modal__header-head">
         <div className="modal__header-info">
@@ -23,10 +24,14 @@ class ModalHeader extends Component {
         </div>
         <div className="modal__header__action">
           <Button className="btn">save as</Button>
-          <Button onClick={this.props.click} className="btn">
-            {this.props.value ? (
+          <Button
+            onClick={() => this.props.onLikeCounter(id, value)}
+            className="btn"
+          >
+            {value ? (
               <>
-                <i className="fas fa-heartbeat" /> unlike{" "}
+                <i className="fas fa-heartbeat" />
+                unlike
               </>
             ) : (
               <>
@@ -35,7 +40,7 @@ class ModalHeader extends Component {
               </>
             )}
           </Button>
-          <p>{this.props.value}</p>
+          <p>{value}</p>
         </div>
       </div>
     );
@@ -46,13 +51,12 @@ const mapStateOfProps = state => {
     value: state.value.value
   };
 };
-
-// const mapToDispatchOfProps = dispatch => {
-//   return {
-//     onLikeCounter: () =>
-//       dispatch({
-//         type: actionType.LIKE
-//       })
-//   };
-// };
-export default connect(mapStateOfProps)(ModalHeader);
+const mapToDispatchOfProps = dispatch => {
+  return {
+    onLikeCounter: (id, value) => dispatch(updateComment(id, value))
+  };
+};
+export default connect(
+  mapStateOfProps,
+  mapToDispatchOfProps
+)(ModalHeader);

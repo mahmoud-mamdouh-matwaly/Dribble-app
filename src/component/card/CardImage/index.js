@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Modal from "../ModalSection";
 
 import ModalSection from "../ModalSection/ModalSection";
-
+import { connect } from "react-redux";
 class CardImage extends Component {
   state = {
     modalVisible: false
@@ -11,8 +11,7 @@ class CardImage extends Component {
 
   render() {
     const { modalVisible } = this.state;
-    const { name, subTitle, urlPng, urlWeb, clicked, value } = this.props;
-
+    const { name, subTitle, urlPng, urlWeb, clicked, id } = this.props;
     return (
       <>
         <a
@@ -38,7 +37,7 @@ class CardImage extends Component {
               name={name}
               subTitle={subTitle}
               click={clicked}
-              value={value}
+              id={id}
             />
           </Modal>
         )}
@@ -46,5 +45,9 @@ class CardImage extends Component {
     );
   }
 }
-
-export default CardImage;
+const mapStateOfProps = state => {
+  return {
+    users: state.users
+  };
+};
+export default connect(mapStateOfProps)(CardImage);

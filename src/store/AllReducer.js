@@ -1,10 +1,8 @@
 import { combineReducers } from "redux";
-import CartData from "./reducers/destructuring";
 
 import resultLike from "./reducers/like";
 
-const AllReducer = combineReducers({
-  users: CartData,
-  value: resultLike
+const allReducer = combineReducers({
+  data: resultLike
 });
-export default AllReducer;
+export default allReducer;

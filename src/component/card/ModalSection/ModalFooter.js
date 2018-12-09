@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Button from "../../button";
-import CardAction from "../CardAction";
+import CardAction from "../CardAction/CardAction";
 
 class ModalFooter extends Component {
   render() {

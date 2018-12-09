@@ -1,6 +1,4 @@
-// export const LIKE = "LIKE";
-export const updateComment = (id, value) => ({
+export const updateLike = id => ({
   id,
-  value,
   type: "LIKE"
 });

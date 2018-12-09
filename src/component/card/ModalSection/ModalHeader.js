@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Button from "../../button";
 import { connect } from "react-redux";
-// import * as actionType from "../../../store/actions";
-import { updateComment } from "../../../store/actions";
+import { updateLike } from "../../../store/actions";
+
 class ModalHeader extends Component {
   render() {
     const { name, id, value } = this.props;
@@ -24,10 +24,7 @@ class ModalHeader extends Component {
         </div>
         <div className="modal__header__action">
           <Button className="btn">save as</Button>
-          <Button
-            onClick={() => this.props.onLikeCounter(id, value)}
-            className="btn"
-          >
+          <Button onClick={() => this.props.onLikeCounter(id)} className="btn">
             {value ? (
               <>
                 <i className="fas fa-heartbeat" />
@@ -46,17 +43,13 @@ class ModalHeader extends Component {
     );
   }
 }
-const mapStateOfProps = state => {
-  return {
-    value: state.value.value
-  };
-};
+
 const mapToDispatchOfProps = dispatch => {
   return {
-    onLikeCounter: (id, value) => dispatch(updateComment(id, value))
+    onLikeCounter: id => dispatch(updateLike(id))
   };
 };
 export default connect(
-  mapStateOfProps,
+  null,
   mapToDispatchOfProps
 )(ModalHeader);

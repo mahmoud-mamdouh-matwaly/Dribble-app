@@ -8,7 +8,7 @@ class CardAction extends Component {
   };
   handle(like) {
     if (!like) {
-      return this.props.likeCount;
+      return 0;
     } else {
       return like.likeCount;
     }
